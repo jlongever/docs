@@ -61,7 +61,9 @@ config.json_
         "tftpBindPort": 69,
         "tftpRoot": "./static/tftp",
         "minLogLevel": 2,
-        "logColorEnable": false
+        "logColorEnable": false,
+        "arpPollerEnabled": true,
+        "enableUPnP": true
     }
 
 
@@ -147,7 +149,10 @@ The following table describes the configuration parameters in config.json:
       - A boolean value to toggle the colorful log output (defaults to false)
     * - enableLocalHostException
       - Set to true to enable the localhost exception, see :ref:`localhost-exception-label`.
-
+    * - enableUPnP
+      - Broadcast HTTP restful API services via SSDP/UPnP advertisements (defaults to true).
+    * - arpPollerEnabled
+      - Use the local systems ARP cache to update the lookup services MAC/IP relations (defaults to true).
 
 The log levels for filtering are defined at https://github.com/RackHD/on-core/blob/master/lib/common/constants.js#L36-L44
 
